@@ -4,10 +4,13 @@ module.exports = {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    colors: {
-      "brightred": "#ff0000"
-    },
-    extend: {},
+    extend: {
+      colors: {
+        brightred: {
+          500:'#ff0000'
+        }
+      }
+    }
   },
   plugins: [],
 }

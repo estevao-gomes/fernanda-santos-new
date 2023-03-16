@@ -39,7 +39,7 @@ export function Hero(){
               y="0"
             >
               <polygon
-                className="text-blue-700 fill-current"
+                className="text-blue-900 fill-current"
                 points="2560 0 2560 100 0 100"
               ></polygon>
             </svg>

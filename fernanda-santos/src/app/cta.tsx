@@ -1,10 +1,30 @@
+'use client'
+
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Image from 'next/image'
 import { faAward, faRetweet, faFingerprint, faUserFriends } from "@fortawesome/free-solid-svg-icons";
+import TextTransition, { presets } from "react-text-transition";
+import { useEffect, useState } from "react";
+
+const transitionTexts = [
+    "viver",
+    "viajar",
+    "cantar",
+    "trabalhar"
+]
 
 export function CTA(){
+    const [index, setIndex] = useState(0)
+
+    useEffect(()=> {
+        const intervalId = setInterval(() =>
+        setIndex(index => index + 1),
+        2000)
+        return ()=> clearTimeout(intervalId)
+    }, [])
+
     return(
-        <section className="pb-20 bg-blue-700 -mt-24">
+        <section className="pb-20 bg-blue-900 -mt-24">
                 <div className="container mx-auto px-4">
                     <div className="flex flex-wrap">
                     <div className="lg:pt-12 pt-6 w-full md:w-4/12 px-4 text-center">
@@ -61,7 +81,7 @@ export function CTA(){
                          <FontAwesomeIcon icon={faUserFriends} />
                         </div>
                         <h3 className="text-3xl mb-2 font-semibold leading-normal">
-                        Working with us is a pleasure
+                        Inglês para você <TextTransition springConfig={presets.wobbly}>{transitionTexts[index % transitionTexts.length]}</TextTransition>
                         </h3>
                         <p className="text-lg font-light leading-relaxed mt-4 mb-4 text-white">
                         Don&apos; let your uses guess by attaching tooltips and popoves
@@ -78,7 +98,7 @@ export function CTA(){
                     </div>
 
                     <div className="w-full md:w-4/12 px-4 mr-auto ml-auto">
-                        <div className="relative flex flex-col min-w-0 break-words w-full mb-6 shadow-lg rounded-lg bg-red-600">
+                        <div className="relative flex flex-col min-w-0 break-words w-full mb-6 shadow-lg rounded-lg bg-brightred-500">
                             <Image 
                                 src="https://picsum.photos/800/600"
                                 alt="placeholder image"
@@ -101,7 +121,7 @@ export function CTA(){
                             >
                             <polygon
                                 points="-30,95 583,95 583,65"
-                                className="text-pink-600 fill-current"
+                                className="text-brightred-500 fill-current"
                             ></polygon>
                             </svg>
                             <h4 className="text-xl font-bold text-white">
