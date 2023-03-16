@@ -4,7 +4,7 @@ import { faAward, faRetweet, faFingerprint, faUserFriends } from "@fortawesome/f
 
 export function CTA(){
     return(
-        <section className="pb-20 bg-gray-300 -mt-24">
+        <section className="pb-20 bg-blue-700 -mt-24">
                 <div className="container mx-auto px-4">
                     <div className="flex flex-wrap">
                     <div className="lg:pt-12 pt-6 w-full md:w-4/12 px-4 text-center">
@@ -13,9 +13,9 @@ export function CTA(){
                             <div className="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-red-400">
                                 <FontAwesomeIcon icon={faAward} />
                             </div>
-                            <h6 className="text-xl font-semibold">Awarded Agency</h6>
+                            <h6 className="text-xl font-semibold">Certificação Internacional</h6>
                             <p className="mt-2 mb-4 text-gray-600">
-                            Divide details about your product or agency work into parts. A paragraph describing a feature will be enough.
+                            Professora certificada internacionalmente através da broasdasd academy.
                             </p>
                         </div>
                         </div>
@@ -28,10 +28,10 @@ export function CTA(){
                                 <FontAwesomeIcon icon={faRetweet} />
                             </div>
                             <h6 className="text-xl font-semibold">
-                            Free Revisions
+                            Conteúdo atualizado
                             </h6>
                             <p className="mt-2 mb-4 text-gray-600">
-                            Keep you user engaged by providing meaningful information. Remember that by this time, the user is curious.
+                            Aprenda sempre com os conteúdos mais atuais e com o uso das técnicas que mais se adequem a sua maneira de aprender.
                             </p>
                         </div>
                         </div>
@@ -44,10 +44,10 @@ export function CTA(){
                                 <FontAwesomeIcon icon={faFingerprint} />
                             </div>
                             <h6 className="text-xl font-semibold">
-                            Verified Company
+                            Feito para você
                             </h6>
                             <p className="mt-2 mb-4 text-gray-600">
-                            Write a few lines about each one. A paragraph describing a feature will be enough. Keep you user engaged!
+                            Material e aulas montadas de acordo com a sua necessidade, para você aprender o inglês que você precisa.
                             </p>
                         </div>
                         </div>
@@ -63,27 +63,22 @@ export function CTA(){
                         <h3 className="text-3xl mb-2 font-semibold leading-normal">
                         Working with us is a pleasure
                         </h3>
-                        <p className="text-lg font-light leading-relaxed mt-4 mb-4 text-gray-700">
+                        <p className="text-lg font-light leading-relaxed mt-4 mb-4 text-white">
                         Don&apos; let your uses guess by attaching tooltips and popoves
                         to any element. Just make sure you enable them first via
                         JavaScript.
                         </p>
-                        <p className="text-lg font-light leading-relaxed mt-0 mb-4 text-gray-700">
+                        <p className="text-lg font-light leading-relaxed mt-0 mb-4 text-white">
                         The kit comes with three pre-built pages to help you get
                         started faster. You can change the text and images and
                         you&apos;e good to go. Just make sure you enable them first via
                         JavaScript.
                         </p>
-                        <a
-                        href="https://www.creative-tim.com/learning-lab/tailwind-starter-kit#/presentation"
-                        className="font-bold text-gray-800 mt-8"
-                        >
-                        Check Tailwind Starter Kit!
-                        </a>
+                        
                     </div>
 
                     <div className="w-full md:w-4/12 px-4 mr-auto ml-auto">
-                        <div className="relative flex flex-col min-w-0 break-words w-full mb-6 shadow-lg rounded-lg bg-pink-600">
+                        <div className="relative flex flex-col min-w-0 break-words w-full mb-6 shadow-lg rounded-lg bg-red-600">
                             <Image 
                                 src="https://picsum.photos/800/600"
                                 alt="placeholder image"

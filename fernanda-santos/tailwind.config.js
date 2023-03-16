@@ -4,6 +4,9 @@ module.exports = {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
+    colors: {
+      "brightred": "#ff0000"
+    },
     extend: {},
   },
   plugins: [],
