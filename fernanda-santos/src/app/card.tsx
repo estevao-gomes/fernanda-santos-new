@@ -11,15 +11,16 @@ interface cardProps{
 
 export function Card({name, description, source, altText}: cardProps){
     return(
-        <div className="w-full md:w-6/12 lg:w-3/12 lg:mb-0 mb-12 px-4">
-                <div className="px-6">
+        <div className="w-9/12 lg:mb-0 mb-12 px-4">
+                <div className="px-6 flex">
                   <Image 
                     src={source}
                     alt={altText}
-                    width={800}
+                    width={400}
                     height={600}
+                    className="flex-1"
                   />
-                  <div className="pt-6 text-center">
+                  <div className="pt-6 ml-4 text-center flex-1">
                     <h5 className="text-xl font-bold">
                       {name}
                     </h5>
