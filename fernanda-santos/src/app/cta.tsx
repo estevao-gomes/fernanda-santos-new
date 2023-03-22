@@ -22,7 +22,7 @@ export function CTA() {
   }, []);
 
   return (
-    <section className="pb-20 bg-blue-900 -mt-24">
+    <section className="pb-20 -mt-24">
       <div className="container mx-auto px-4">
         <div className="flex flex-wrap">
           <div className="lg:pt-12 pt-6 w-full md:w-4/12 px-4 text-center">
@@ -78,10 +78,10 @@ export function CTA() {
             <div className="text-gray-600 p-3 text-center inline-flex items-center justify-center w-16 h-16 mb-6 shadow-lg rounded-full bg-gray-100">
               <FontAwesomeIcon icon={faUserFriends} />
             </div>
-            <h3 className="text-3xl mb-2 font-semibold leading-normal text-transparent bg-gradient-to-tr from-brightred to-blue-900">
+            <h3 className="text-6xl mb-2 text-blue-900 font-bold leading-normal">
               Inglês para você{" "}
-              <TextTransition springConfig={presets.wobbly}>
-                {transitionTexts[index % transitionTexts.length]}
+              <TextTransition inline springConfig={presets.wobbly}>
+                <h1 className="bg-clip-text text-transparent bg-gradient-to-tr from-brightred-500 to-blue-900">{transitionTexts[index % transitionTexts.length]}</h1>
               </TextTransition>
             </h3>
             <p className="text-lg font-light leading-relaxed mt-4 mb-4 text-white">
