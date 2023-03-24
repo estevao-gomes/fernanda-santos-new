@@ -1,5 +1,7 @@
-import Image from "next/image"
 import { Card } from "./card"
+import { Carousel } from 'react-responsive-carousel';
+
+
 
 export function Social(){
     return(
@@ -15,32 +17,26 @@ export function Social(){
                 </p>
               </div>
             </div>
-            <div>
-              <Card
-                name="Interesting Person"
-                description="Essa aula de inglês tem me ajudado imensamente. Minha pronunciação melhorou e consigo me comunicar mais facil e rapidamente."
-                source="https://picsum.photos/800/600"
-                altText="Placeholder Image"
-              />
-              {/* <Card
-                name="Interesting Person"
-                description="Nice Description"
-                source="https://picsum.photos/800/600"
-                altText="Placeholder Image"
-              />
-              <Card
-                name="Interesting Person"
-                description="Nice Description"
-                source="https://picsum.photos/800/600"
-                altText="Placeholder Image"
-              />
-              <Card
-                name="Interesting Person"
-                description="Nice Description"
-                source="https://picsum.photos/800/600"
-                altText="Placeholder Image"
-              /> */}
-            </div>
+            <Carousel autoPlay infiniteLoop interval={2000}>
+                <Card
+                  name="Interesting Person"
+                  description="Essa aula de inglês tem me ajudado imensamente. Minha pronunciação melhorou e consigo me comunicar mais facil e rapidamente."
+                  source="https://picsum.photos/800/600"
+                  altText="Placeholder Image"
+                />
+                <Card
+                  name="Interesting Person 2"
+                  description="Essa aula de inglês tem me ajudado imensamente. Minha pronunciação melhorou e consigo me comunicar mais facil e rapidamente."
+                  source="https://picsum.photos/800/600"
+                  altText="Placeholder Image"
+                />
+                <Card
+                  name="Interesting Person 3"
+                  description="Essa aula de inglês tem me ajudado imensamente. Minha pronunciação melhorou e consigo me comunicar mais facil e rapidamente."
+                  source="https://picsum.photos/800/600"
+                  altText="Placeholder Image"
+                />
+            </Carousel>
           </div>
         </section>
     )

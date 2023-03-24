@@ -6,12 +6,12 @@ interface cardProps{
     name: string;
     description: string;
     source: string;
-    altText: string
+    altText: string;
 }
 
 export function Card({name, description, source, altText}: cardProps){
     return(
-        <div className="w-9/12 lg:mb-0 mb-12 px-4">
+        <div className={`w-9/12 lg:mb-0 mb-12 px-4`}>
                 <div className="px-6 flex">
                   <Image 
                     src={source}

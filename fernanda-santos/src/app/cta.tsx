@@ -11,7 +11,7 @@ import {
 import TextTransition, { presets } from "react-text-transition";
 import { useEffect, useState } from "react";
 
-const transitionTexts = ["viver", "viajar", "cantar", "trabalhar"];
+const transitionTexts = ["VIVER", "VIAJAR", "CANTAR", "TRABALHAR"];
 
 export function CTA() {
   const [index, setIndex] = useState(0);
