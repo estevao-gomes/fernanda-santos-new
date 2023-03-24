@@ -22,7 +22,7 @@ export function CTA() {
   }, []);
 
   return (
-    <section className="pb-20 bg-blue-900 -mt-24">
+    <section className="pb-20 -mt-24 bg-transparent">
       <div className="container mx-auto px-4">
         <div className="flex flex-wrap">
           <div className="lg:pt-12 pt-6 w-full md:w-4/12 px-4 text-center">
