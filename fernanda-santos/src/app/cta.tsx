@@ -10,6 +10,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import TextTransition, { presets } from "react-text-transition";
 import { useEffect, useState } from "react";
+import { Button } from "@/components/button";
 
 const transitionTexts = ["VIVER", "VIAJAR", "CANTAR", "TRABALHAR"];
 
@@ -74,11 +75,11 @@ export function CTA() {
         </div>
 
         <div className="flex flex-wrap items-center mt-32">
-          <div className="w-full md:w-5/12 px-4 mr-auto ml-auto">
+          <div className="w-full md:w-5/12 px-4 mr-auto ml-auto mb-12 md:mb-0">
             <div className="text-gray-600 p-3 text-center inline-flex items-center justify-center w-16 h-16 mb-6 shadow-lg rounded-full bg-white">
               <FontAwesomeIcon icon={faUserFriends} />
             </div>
-            <h3 className="text-6xl mb-2 text-blue-900 font-bold leading-normal">
+            <h3 className="text-5xl md:text-6xl mb-2 text-blue-900 font-bold leading-normal">
               Inglês para você{" "}
               <TextTransition springConfig={presets.wobbly}>
                 <h1 className="bg-clip-text text-transparent bg-gradient-to-tr from-brightred-500 to-blue-900">
@@ -94,6 +95,7 @@ export function CTA() {
               Aulas especializadas na seu uso, seja esse para atividades
               técnicas ou recreativas.
             </p>
+            <Button url="contact" text="Fale comigo!" />
           </div>
 
           <div className="w-full md:w-4/12 px-4 mr-auto ml-auto">
