@@ -5,7 +5,7 @@ interface ButtonProps {
 export function Button({ url, text }: ButtonProps) {
   return (
     <a href={`#${url}`}>
-      <button className="border rounded-lg bg-brightred-500 text-white font-bold text-3xl px-4 mx-auto">
+      <button className="mx-auto rounded-lg border bg-brightred-500 px-4 text-3xl font-bold text-white">
         {text}
       </button>
     </a>

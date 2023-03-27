@@ -23,13 +23,13 @@ export function CTA() {
   }, []);
 
   return (
-    <section className="pb-20 -mt-24 bg-slate-100">
+    <section className="-mt-24 bg-slate-100 pb-20">
       <div className="container mx-auto px-4">
         <div className="flex flex-wrap">
-          <div className="lg:pt-12 pt-6 w-full md:w-4/12 px-4 text-center">
-            <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg">
-              <div className="px-4 py-5 flex-auto">
-                <div className="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-red-400">
+          <div className="w-full px-4 pt-6 text-center md:w-4/12 lg:pt-12">
+            <div className="relative mb-8 flex w-full min-w-0 flex-col break-words rounded-lg bg-white text-blue-900 shadow-lg">
+              <div className="flex-auto px-4 py-5">
+                <div className="mb-5 inline-flex h-12 w-12 items-center justify-center rounded-full bg-blue-900 p-3 text-center text-white shadow-lg">
                   <FontAwesomeIcon icon={faAward} />
                 </div>
                 <h6 className="text-xl font-semibold">
@@ -43,10 +43,10 @@ export function CTA() {
             </div>
           </div>
 
-          <div className="w-full md:w-4/12 px-4 text-center">
-            <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg">
-              <div className="px-4 py-5 flex-auto">
-                <div className="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-blue-400">
+          <div className="w-full px-4 text-center md:w-4/12">
+            <div className="relative mb-8 flex w-full min-w-0 flex-col break-words rounded-lg bg-white text-blue-900 shadow-lg">
+              <div className="flex-auto px-4 py-5">
+                <div className="mb-5 inline-flex h-12 w-12 items-center justify-center rounded-full bg-blue-900 p-3 text-center text-white shadow-lg">
                   <FontAwesomeIcon icon={faRetweet} />
                 </div>
                 <h6 className="text-xl font-semibold">Conteúdo atualizado</h6>
@@ -58,10 +58,10 @@ export function CTA() {
             </div>
           </div>
 
-          <div className="pt-6 w-full md:w-4/12 px-4 text-center">
-            <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg">
-              <div className="px-4 py-5 flex-auto">
-                <div className="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-green-400">
+          <div className="w-full px-4 pt-6 text-center md:w-4/12">
+            <div className="relative mb-8 flex w-full min-w-0 flex-col break-words rounded-lg bg-white text-blue-900 shadow-lg">
+              <div className="flex-auto px-4 py-5">
+                <div className="mb-5 inline-flex h-12 w-12 items-center justify-center rounded-full bg-blue-900 p-3 text-center text-white shadow-lg">
                   <FontAwesomeIcon icon={faFingerprint} />
                 </div>
                 <h6 className="text-xl font-semibold">Feito para você</h6>
@@ -74,45 +74,42 @@ export function CTA() {
           </div>
         </div>
 
-        <div className="flex flex-wrap items-center mt-32">
-          <div className="w-full md:w-5/12 px-4 mr-auto ml-auto mb-12 md:mb-0">
-            <div className="text-gray-600 p-3 text-center inline-flex items-center justify-center w-16 h-16 mb-6 shadow-lg rounded-full bg-white">
-              <FontAwesomeIcon icon={faUserFriends} />
-            </div>
-            <h3 className="text-5xl md:text-6xl mb-2 text-blue-900 font-bold leading-normal">
+        <div className="mt-32 flex flex-wrap items-center">
+          <div className="mr-auto ml-auto mb-12 w-full px-4 md:mb-0 md:w-5/12">
+            <h3 className="mb-2 text-5xl font-bold leading-normal text-blue-900 md:text-6xl">
               Inglês para você{" "}
               <TextTransition springConfig={presets.wobbly}>
-                <h1 className="bg-clip-text text-transparent bg-gradient-to-tr from-brightred-500 to-blue-900">
+                <h1 className="bg-gradient-to-tr from-brightred-500 to-blue-900 bg-clip-text text-transparent">
                   {transitionTexts[index % transitionTexts.length]}
                 </h1>
               </TextTransition>
             </h3>
-            <p className="text-lg leading-relaxed mt-4 mb-4 text-blue-900">
+            <p className="mt-4 mb-4 text-lg leading-relaxed text-blue-900">
               Aqui o aprendizado é moldado a sua necessidade. Aprenda com foco
               no que você precisa, e não de maneira genérica.
             </p>
-            <p className="text-lg leading-relaxed mt-0 mb-4 text-blue-900">
+            <p className="mt-0 mb-4 text-lg leading-relaxed text-blue-900">
               Aulas especializadas na seu uso, seja esse para atividades
               técnicas ou recreativas.
             </p>
             <Button url="contact" text="Fale comigo!" />
           </div>
 
-          <div className="w-full md:w-4/12 px-4 mr-auto ml-auto">
-            <div className="relative flex flex-col min-w-0 break-words w-full mb-6 shadow-lg rounded-lg bg-brightred-500">
+          <div className="mr-auto ml-auto w-full px-4 md:w-4/12">
+            <div className="relative mb-6 flex w-full min-w-0 flex-col break-words rounded-lg bg-blue-900 shadow-lg">
               <Image
                 src="https://picsum.photos/800/600"
                 alt="placeholder image"
                 width={800}
                 height={600}
               />
-              <div className="w-full align-middle rounded-t-lg" />
-              <blockquote className="relative p-8 mb-4">
+              <div className="w-full rounded-t-lg align-middle" />
+              <blockquote className="relative mb-4 p-8">
                 <svg
                   preserveAspectRatio="none"
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 583 95"
-                  className="absolute left-0 w-full block"
+                  className="absolute left-0 block w-full"
                   style={{
                     height: "95px",
                     top: "-94px",
@@ -120,13 +117,13 @@ export function CTA() {
                 >
                   <polygon
                     points="-30,95 583,95 583,65"
-                    className="text-brightred-500 fill-current"
+                    className="fill-current text-blue-900"
                   ></polygon>
                 </svg>
                 <h4 className="text-xl font-bold text-white">
                   Aulas didáticas e dinâmicas.
                 </h4>
-                <p className="text-md font-light mt-2 text-white">
+                <p className="text-md mt-2 font-light text-white">
                   Aprenda da maneira mais rápida e de forma eficiente. Tudo
                   adaptado para a melhor experiência.
                 </p>
