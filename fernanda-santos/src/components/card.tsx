@@ -14,9 +14,9 @@ export function Card({ name, description, source, altText }: cardProps) {
         <Image
           src={source}
           alt={altText}
-          width={400}
-          height={600}
-          className="flex-1"
+          width={200}
+          height={300}
+          className="width-[1/8] flex-1"
         />
         <div className="ml-4 flex flex-1 flex-col justify-center pt-6 text-left">
           <h5 className="text-xl font-semibold">{name}</h5>

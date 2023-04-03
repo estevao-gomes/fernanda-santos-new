@@ -23,19 +23,19 @@ export function Social() {
           <Card
             name="Interesting Person"
             description="Essa aula de inglês tem me ajudado imensamente. Minha pronunciação melhorou e consigo me comunicar mais facil e rapidamente."
-            source="https://picsum.photos/800/600"
+            source="https://api.dicebear.com/6.x/big-smile/svg?seed=Felix&size=48"
             altText="Placeholder Image"
           />
           <Card
             name="Interesting Person 2"
             description="Essa aula de inglês tem me ajudado imensamente. Minha pronunciação melhorou e consigo me comunicar mais facil e rapidamente."
-            source="https://picsum.photos/800/600"
+            source="https://api.dicebear.com/6.x/big-smile/svg?seed=Aneka&size=48"
             altText="Placeholder Image"
           />
           <Card
             name="Interesting Person 3"
             description="Essa aula de inglês tem me ajudado imensamente. Minha pronunciação melhorou e consigo me comunicar mais facil e rapidamente."
-            source="https://picsum.photos/800/600"
+            source="https://api.dicebear.com/6.x/big-smile/svg?seed=Felix&size=48"
             altText="Placeholder Image"
           />
         </Carousel>

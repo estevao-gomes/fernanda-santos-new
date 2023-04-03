@@ -7,7 +7,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export function Contact() {
   return (
-    <section id="contact" className="relative block bg-gray-900 py-24 lg:pt-0">
+    <section id="contact" className="relative block bg-blue-900 py-24 lg:pt-0">
       <div className="container mx-auto px-4">
         <div className="-mt-48 flex flex-wrap justify-center lg:-mt-64">
           <div className="w-full px-4 lg:w-6/12">
