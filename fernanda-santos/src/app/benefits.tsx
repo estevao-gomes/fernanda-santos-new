@@ -1,11 +1,17 @@
 import {
-  faRocket,
   faFingerprint,
   faPaperPlane,
   faCode,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 import Image from "next/image";
+import { Open_Sans } from 'next/font/google'
+
+const open_sans = Open_Sans({
+  weight: "800",
+  subsets: ["latin"]
+})
 
 export function Benefits() {
   return (
@@ -42,7 +48,7 @@ export function Benefits() {
           </div>
           <div className="ml-auto mr-auto w-full px-4 md:w-5/12">
             <div className="md:pr-12">
-              <h3 className="text-3xl font-semibold text-blue-900">
+              <h3 className={`${open_sans.className} text-3xl font-semibold text-blue-900`}>
                 Preço que cabe no seu bolso
               </h3>
               <p className="mt-4 text-lg leading-relaxed text-gray-600">

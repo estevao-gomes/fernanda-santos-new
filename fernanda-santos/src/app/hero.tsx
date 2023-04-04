@@ -1,3 +1,10 @@
+import { Open_Sans } from "next/font/google";
+
+const open_sans = Open_Sans({
+  weight: "800",
+  subsets: ["latin"]
+})
+
 export function Hero() {
   return (
     <div
@@ -21,7 +28,7 @@ export function Hero() {
         <div className="flex flex-wrap items-center">
           <div className="ml-auto mr-auto w-full px-4 text-center lg:w-6/12">
             <div className="pr-12">
-              <h1 className="text-5xl font-semibold text-white">
+              <h1 className={`${open_sans.className} text-5xl font-semibold text-white`}>
                 Professora <p>Fernanda Santos</p>
               </h1>
               <p className="mt-4 text-lg text-gray-300">

@@ -1,16 +1,24 @@
 "use client";
+import { useEffect, useState } from "react";
+
+import TextTransition, { presets } from "react-text-transition";
+
+import Image from "next/image";
+import { Open_Sans } from "next/font/google";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import Image from "next/image";
 import {
   faAward,
   faRetweet,
-  faFingerprint,
-  faUserFriends,
+  faFingerprint
 } from "@fortawesome/free-solid-svg-icons";
-import TextTransition, { presets } from "react-text-transition";
-import { useEffect, useState } from "react";
+
 import { Button } from "@/components/button";
+
+const open_sans = Open_Sans({
+  subsets: ["latin"],
+  weight: "800"
+})
 
 const transitionTexts = ["VIVER", "VIAJAR", "CANTAR", "TRABALHAR"];
 
@@ -76,7 +84,7 @@ export function CTA() {
 
         <div className="mt-32 flex flex-wrap items-center">
           <div className="mr-auto ml-auto mb-12 w-full px-4 md:mb-0 md:w-5/12">
-            <h3 className="mb-2 text-5xl font-bold leading-normal text-blue-900 md:text-6xl">
+            <h3 className={`${open_sans.className} mb-2 text-5xl font-bold leading-normal text-blue-900 md:text-6xl`}>
               Inglês para você{" "}
               <TextTransition springConfig={presets.wobbly}>
                 <h1 className="bg-gradient-to-tr from-brightred-500 to-blue-900 bg-clip-text text-transparent">

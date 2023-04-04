@@ -1,8 +1,15 @@
 "use client";
 import { Card } from "@/components/card";
 import { Carousel } from "react-responsive-carousel";
+import { Open_Sans } from 'next/font/google'
 
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
+
+const open_sans = Open_Sans({
+  weight: "800",
+  subsets: ["latin"]
+})
+
 
 export function Social() {
   return (
@@ -10,7 +17,7 @@ export function Social() {
       <div className="mx-auto px-4">
         <div className="mb-24 flex flex-wrap justify-center text-center">
           <div className="w-full px-4 lg:w-6/12">
-            <h2 className="text-4xl font-semibold text-blue-900">
+            <h2 className={`${open_sans.className} text-4xl font-semibold text-blue-900`}>
               Veja alguns depoimentos
             </h2>
             <p className="m-4 text-lg leading-relaxed text-gray-600">
@@ -19,7 +26,7 @@ export function Social() {
             </p>
           </div>
         </div>
-        <Carousel infiniteLoop autoPlay interval={4000} showStatus={false}>
+        <Carousel showThumbs={false} infiniteLoop autoPlay interval={4000} showStatus={false}>
           <Card
             name="Interesting Person"
             description="Essa aula de inglês tem me ajudado imensamente. Minha pronunciação melhorou e consigo me comunicar mais facil e rapidamente."

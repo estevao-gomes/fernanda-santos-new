@@ -1,8 +1,17 @@
 import './globals.css'
 import { config } from '@fortawesome/fontawesome-svg-core'
 import '@fortawesome/fontawesome-svg-core/styles.css'
+
+import {PT_Sans, Open_Sans } from 'next/font/google'
+
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 config.autoAddCss = false
+
+const pt_sans = PT_Sans({
+  weight: ['400', '700'],
+  subsets: ['latin'],
+  display: 'auto'
+})
 
 export const metadata = {
   title: 'Template',
@@ -18,7 +27,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body className={pt_sans.className}>{children}</body>
     </html>
   )
 }
