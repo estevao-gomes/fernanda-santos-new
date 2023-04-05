@@ -6,8 +6,9 @@ import {
   faInstagram,
 } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { useState, FormEvent } from "react";
+import { FormEvent, useState } from "react";
 import Swal from 'sweetalert2'
+import emailjs from '@emailjs/browser'
 
 
 
@@ -18,16 +19,34 @@ export function Contact() {
     text: ""
   })
 
-  function handleSubmitForm(event: FormEvent){
+  async function handleSubmitForm(event: FormEvent<HTMLFormElement>){
     event.preventDefault()
-    console.log(formData)
-    setFormData({name: "", email: "", text: ""})
-    Swal.fire({
-      title: "Mensagem enviada com sucesso",
-      icon: 'success',
-      text: 'Entrarei em contato em breve!'
-    })
+ 
+    if(!!process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY && !!process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID && !!process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID){
+      try{
+        const dataResult = await emailjs.sendForm(process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID, process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID, event.currentTarget, process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY)
+        console.log(dataResult)
+      }catch(error: any){
+        Swal.fire({
+          title: "Erro no envio da mensagem",
+          icon: "error",
+          text: 'Por favor, tente novamente mais tarde.'
+        })
+        console.log(error.text)
+      }
 
+      setFormData({name: "", email: "", text: ""})
+
+      Swal.fire({
+        title: "Mensagem enviada com sucesso",
+        icon: 'success',
+        text: 'Entrarei em contato em breve!'
+      })
+      return
+    }
+
+    console.log(formData)
+      return
   }
 
   function handleFormInput(event: HTMLInputElement|HTMLTextAreaElement){
@@ -56,6 +75,7 @@ export function Contact() {
                       Nome Completo
                     </label>
                     <input
+                      required
                       name="name"
                       type="text"
                       className="w-full rounded border-0 bg-white px-3 py-3 text-sm text-gray-700 placeholder-gray-400 shadow focus:outline-none focus:ring"
@@ -74,6 +94,7 @@ export function Contact() {
                       Email
                     </label>
                     <input
+                      required
                       type="email"
                       name="email"
                       className="w-full rounded border-0 bg-white px-3 py-3 text-sm text-gray-700 placeholder-gray-400 shadow focus:outline-none focus:ring"
@@ -92,6 +113,8 @@ export function Contact() {
                       Mensagem
                     </label>
                     <textarea
+                      required
+                      minLength={20}
                       rows={4}
                       cols={80}
                       className="w-full rounded border-0 bg-white px-3 py-3 text-sm text-gray-700 placeholder-gray-400 shadow focus:outline-none focus:ring"
