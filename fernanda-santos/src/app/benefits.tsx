@@ -6,12 +6,14 @@ import {
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import Image from "next/image";
-import { Open_Sans } from 'next/font/google'
+import { Open_Sans } from "next/font/google";
+
+import benefitsImage from "@/assets/benefits.jpg";
 
 const open_sans = Open_Sans({
   weight: "800",
-  subsets: ["latin"]
-})
+  subsets: ["latin"],
+});
 
 export function Benefits() {
   return (
@@ -40,15 +42,18 @@ export function Benefits() {
         <div className="flex flex-wrap items-center">
           <div className="ml-auto mr-auto mb-4 w-full px-4 md:mb-0 md:w-4/12">
             <Image
-              src="https://picsum.photos/800/600"
+              src={benefitsImage}
               alt="Placeholder Image"
-              width={800}
-              height={600}
+              width={400}
+              height={200}
+              className="rounded-lg"
             />
           </div>
           <div className="ml-auto mr-auto w-full px-4 md:w-5/12">
             <div className="md:pr-12">
-              <h3 className={`${open_sans.className} text-3xl font-semibold text-blue-900`}>
+              <h3
+                className={`${open_sans.className} text-3xl font-semibold text-blue-900`}
+              >
                 Preço que cabe no seu bolso
               </h3>
               <p className="mt-4 text-lg leading-relaxed text-gray-600">

@@ -10,15 +10,16 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faAward,
   faRetweet,
-  faFingerprint
+  faFingerprint,
 } from "@fortawesome/free-solid-svg-icons";
 
 import { Button } from "@/components/button";
+import ctaImage from "@/assets/cta.avif";
 
 const open_sans = Open_Sans({
   subsets: ["latin"],
-  weight: "800"
-})
+  weight: "800",
+});
 
 const transitionTexts = ["VIVER", "VIAJAR", "CANTAR", "TRABALHAR"];
 
@@ -31,7 +32,7 @@ export function CTA() {
   }, []);
 
   return (
-    <section className="-mt-24 bg-slate-100 pb-20">
+    <section className=" bg-slate-100 pb-20">
       <div className="container mx-auto px-4">
         <div className="flex flex-wrap">
           <div className="w-full px-4 pt-6 text-center md:w-4/12 lg:pt-12">
@@ -51,7 +52,7 @@ export function CTA() {
             </div>
           </div>
 
-          <div className="w-full px-4 text-center md:w-4/12">
+          <div className="w-full px-4 pt-6 text-center md:w-4/12 lg:pt-12">
             <div className="relative mb-8 flex w-full min-w-0 flex-col break-words rounded-lg bg-white text-blue-900 shadow-lg">
               <div className="flex-auto px-4 py-5">
                 <div className="mb-5 inline-flex h-12 w-12 items-center justify-center rounded-full bg-blue-900 p-3 text-center text-white shadow-lg">
@@ -66,7 +67,7 @@ export function CTA() {
             </div>
           </div>
 
-          <div className="w-full px-4 pt-6 text-center md:w-4/12">
+          <div className="w-full px-4 pt-6 text-center md:w-4/12 lg:pt-12">
             <div className="relative mb-8 flex w-full min-w-0 flex-col break-words rounded-lg bg-white text-blue-900 shadow-lg">
               <div className="flex-auto px-4 py-5">
                 <div className="mb-5 inline-flex h-12 w-12 items-center justify-center rounded-full bg-blue-900 p-3 text-center text-white shadow-lg">
@@ -84,7 +85,9 @@ export function CTA() {
 
         <div className="mt-32 flex flex-wrap items-center">
           <div className="mr-auto ml-auto mb-12 w-full px-4 md:mb-0 md:w-5/12">
-            <h3 className={`${open_sans.className} mb-2 text-5xl font-bold leading-normal text-blue-900 md:text-6xl`}>
+            <h3
+              className={`${open_sans.className} mb-2 text-5xl font-bold leading-normal text-blue-900 md:text-6xl`}
+            >
               Inglês para você{" "}
               <TextTransition springConfig={presets.wobbly}>
                 <h1 className="bg-gradient-to-tr from-brightred-500 to-blue-900 bg-clip-text text-transparent">
@@ -106,10 +109,11 @@ export function CTA() {
           <div className="mr-auto ml-auto w-full px-4 md:w-4/12">
             <div className="relative mb-6 flex w-full min-w-0 flex-col break-words rounded-lg bg-blue-900 shadow-lg">
               <Image
-                src="https://picsum.photos/800/600"
+                src={ctaImage}
                 alt="placeholder image"
                 width={800}
                 height={600}
+                className="rounded-t-lg"
               />
               <div className="w-full rounded-t-lg align-middle" />
               <blockquote className="relative mb-4 p-8">
