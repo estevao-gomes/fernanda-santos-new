@@ -1,4 +1,4 @@
-Esta é uma simples Landing Page feita em NextJS e Typescript, para uma professora de inglês.
+Esta é uma simples Landing Page feita em NextJS e Typescript, para aulas online de inglês.
 
 O projeto está em desenvolvimento.
 
@@ -11,9 +11,8 @@ As tecnologias implementadas incluem:
 <li>react-responsive-carousel</li>
 <li>react-text-transition</li>
 <li>sweetalert</li>
+<li>EmailJS</li>
 </ul>
-
-Feature em implementação inclui envio de email utilizando EmailJS.
 
 <ol>
 <li>Clone o repositório</li>
