@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { About } from "./about";
 import { Benefits } from "./benefits";
 import { Contact } from "./contact";

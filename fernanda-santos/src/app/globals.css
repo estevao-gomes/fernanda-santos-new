@@ -15,3 +15,24 @@
 .gradient {
   background: linear-gradient(90deg, #d53369 0%, #daae51 100%);
 }
+
+.carousel .control-prev.control-arrow{
+  border-style: solid;
+  border: 2px;
+  border-color: white;
+
+  background-color: #ff0000;
+  border-top-left-radius: 0.5rem;
+  border-bottom-left-radius: 0.5rem;
+}
+
+.carousel .control-next.control-arrow{
+  border-style: solid;
+  border: 2px;
+  border-color: white;
+
+  background-color: #ff0000;
+
+  border-top-right-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+}

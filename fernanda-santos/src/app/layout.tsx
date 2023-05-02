@@ -2,9 +2,10 @@ import './globals.css'
 import { config } from '@fortawesome/fontawesome-svg-core'
 import '@fortawesome/fontawesome-svg-core/styles.css'
 
-import {PT_Sans, Open_Sans } from 'next/font/google'
+import {PT_Sans} from 'next/font/google'
 
-import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
+import "react-responsive-carousel/lib/styles/carousel.min.css"; 
+
 config.autoAddCss = false
 
 const pt_sans = PT_Sans({
@@ -14,10 +15,13 @@ const pt_sans = PT_Sans({
 })
 
 export const metadata = {
-  title: 'Template',
-  description: 'Template for website',
+  title: 'Prof. Fernanda Santos',
+  description: 'Professora Fernanda Santos - Aulas de inglês online',
   keywords: 'english, teaching, education',
-  author: 'Estevao Gomes'
+  author: 'Estevao Gomes',
+  icons:{
+    icon:'@/assets/favicon.ico',
+  }
 }
 
 export default function RootLayout({
