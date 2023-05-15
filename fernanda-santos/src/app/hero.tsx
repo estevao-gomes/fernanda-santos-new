@@ -16,7 +16,7 @@ const pt_sans = PT_Sans_Narrow({
 
 export function Hero() {
   return (
-    <div className="h-screen min-h-[75vh] overflow-hidden bg-white lg:grid lg:grid-cols-2 mt-16">
+    <div className="h-screen min-h-[75vh] overflow-hidden bg-white lg:grid lg:grid-cols-2">
       <div className="flex items-center px-4 text-center lg:col-span-1">
         <div className="flex flex-col md:pl-24">
           <p
@@ -40,15 +40,11 @@ export function Hero() {
           </div>
         </div>
       </div>
-      <div className="relative flex h-full justify-center lg:items-center lg:justify-end lg:col-span-1 lg:auto-cols-min">
-        <div className="relative mt-16 md:mt-32 h-1/4 w-2/3 lg:h-1/2 lg:mt-0 lg:w-full lg:translate-x-32">
-          <div className="absolute lg:-z-10 h-full w-full translate-x-4 translate-y-4 lg:translate-x-8 lg:translate-y-8 bg-blue-900"></div>
-          <div className="absolute lg:-z-10 h-full w-full -translate-x-4 -translate-y-4 lg:-translate-x-8 lg:-translate-y-8 bg-brightred-500"></div>
-          <Image
-            fill
-            src={HeroImage}
-            alt="Hero image"
-          />
+      <div className="relative flex h-full justify-center lg:col-span-1 lg:auto-cols-min lg:items-center lg:justify-end">
+        <div className="relative mt-16 h-1/4 w-2/3 md:mt-32 lg:mt-0 lg:h-1/2 lg:w-full lg:translate-x-32">
+          <div className="absolute h-full w-full translate-x-4 translate-y-4 bg-blue-900 lg:-z-10 lg:translate-x-8 lg:translate-y-8"></div>
+          <div className="absolute h-full w-full -translate-x-4 -translate-y-4 bg-brightred-500 lg:-z-10 lg:-translate-x-8 lg:-translate-y-8"></div>
+          <Image fill src={HeroImage} alt="Hero image" />
         </div>
       </div>
     </div>

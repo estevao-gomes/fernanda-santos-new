@@ -45,8 +45,8 @@ export function CTA() {
                   Certificação Internacional
                 </h6>
                 <p className="mt-2 mb-4 text-gray-600">
-                  Professora certificada internacionalmente através da broasdasd
-                  academy.
+                  Mais de 15 anos de experiência em ensinar a lingua inglesa,
+                  sendo mais de 8 com aulas online.
                 </p>
               </div>
             </div>

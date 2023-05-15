@@ -1,4 +1,4 @@
-'use client'
+"use client";
 
 import {
   faFacebook,
@@ -7,51 +7,58 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { FormEvent, useState } from "react";
-import Swal from 'sweetalert2'
-import emailjs from '@emailjs/browser'
-
-
+import Swal from "sweetalert2";
+import emailjs from "@emailjs/browser";
 
 export function Contact() {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
-    text: ""
-  })
+    text: "",
+  });
 
-  async function handleSubmitForm(event: FormEvent<HTMLFormElement>){
-    event.preventDefault()
- 
-    if(!!process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY && !!process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID && !!process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID){
-      try{
-        const dataResult = await emailjs.sendForm(process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID, process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID, event.currentTarget, process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY)
-        console.log(dataResult)
-      }catch(error: any){
+  async function handleSubmitForm(event: FormEvent<HTMLFormElement>) {
+    event.preventDefault();
+
+    if (
+      !!process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY &&
+      !!process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID &&
+      !!process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID
+    ) {
+      try {
+        const dataResult = await emailjs.sendForm(
+          process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID,
+          process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID,
+          event.currentTarget,
+          process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY
+        );
+        console.log(dataResult);
+      } catch (error: any) {
         Swal.fire({
           title: "Erro no envio da mensagem",
           icon: "error",
-          text: 'Por favor, tente novamente mais tarde.'
-        })
-        console.log(error.text)
+          text: "Por favor, tente novamente mais tarde.",
+        });
+        console.log(error.text);
       }
 
-      setFormData({name: "", email: "", text: ""})
+      setFormData({ name: "", email: "", text: "" });
 
       Swal.fire({
         title: "Mensagem enviada com sucesso",
-        icon: 'success',
-        text: 'Entrarei em contato em breve!'
-      })
-      return
+        icon: "success",
+        text: "Entrarei em contato em breve!",
+      });
+      return;
     }
 
-    console.log(formData)
-      return
+    console.log(formData);
+    return;
   }
 
-  function handleFormInput(event: HTMLInputElement|HTMLTextAreaElement){
-    const newFormData = {...formData, [event.name]:event.value}
-    setFormData(newFormData)
+  function handleFormInput(event: HTMLInputElement | HTMLTextAreaElement) {
+    const newFormData = { ...formData, [event.name]: event.value };
+    setFormData(newFormData);
   }
 
   return (
@@ -82,7 +89,9 @@ export function Contact() {
                       placeholder="Full Name"
                       style={{ transition: "all .15s ease" }}
                       value={formData.name}
-                      onChange={(e)=>{handleFormInput(e.currentTarget)}}
+                      onChange={(e) => {
+                        handleFormInput(e.currentTarget);
+                      }}
                     />
                   </div>
 
@@ -101,7 +110,7 @@ export function Contact() {
                       placeholder="Email"
                       style={{ transition: "all .15s ease" }}
                       value={formData.email}
-                      onChange={(e)=>handleFormInput(e.currentTarget)}
+                      onChange={(e) => handleFormInput(e.currentTarget)}
                     />
                   </div>
 
@@ -121,7 +130,7 @@ export function Contact() {
                       placeholder="Type a message..."
                       name="text"
                       value={formData.text}
-                      onChange={(e)=>handleFormInput(e.currentTarget)}
+                      onChange={(e) => handleFormInput(e.currentTarget)}
                     />
                   </div>
                   <div className="mt-6 text-center">
@@ -137,24 +146,34 @@ export function Contact() {
               </div>
             </div>
             <div className="mx-auto mt-6 flex justify-center">
-              <button
+              {/* <button
                 className="mr-1 mb-1 h-8 w-8 rounded-full bg-blue-400 text-white outline-none focus:outline-none"
                 type="button"
               >
                 <FontAwesomeIcon icon={faTwitter} />
-              </button>
-              <button
-                className="mr-1 mb-1 h-8 w-8 rounded-full bg-blue-600 text-white outline-none focus:outline-none"
-                type="button"
+              </button> */}
+              <a
+                href="https://www.facebook.com/profinglesfernanda"
+                target="_blank"
               >
-                <FontAwesomeIcon icon={faFacebook} />
-              </button>
-              <button
-                className="mr-1 mb-1 h-8 w-8 rounded-full bg-pink-500 text-white outline-none focus:outline-none"
-                type="button"
+                <button
+                  className="mr-1 mb-1 h-8 w-8 rounded-full bg-blue-600 text-white outline-none focus:outline-none"
+                  type="button"
+                >
+                  <FontAwesomeIcon icon={faFacebook} />
+                </button>
+              </a>
+              <a
+                target="_blank"
+                href="https://www.instagram.com/profinglesfernanda/"
               >
-                <FontAwesomeIcon icon={faInstagram} />
-              </button>
+                <button
+                  className="mr-1 mb-1 h-8 w-8 rounded-full bg-pink-500 text-white outline-none focus:outline-none"
+                  type="button"
+                >
+                  <FontAwesomeIcon icon={faInstagram} />
+                </button>
+              </a>
             </div>
           </div>
         </div>
