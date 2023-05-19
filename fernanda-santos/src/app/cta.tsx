@@ -100,8 +100,8 @@ export function CTA() {
               no que você precisa, e não de maneira genérica.
             </p>
             <p className="mt-0 mb-4 text-lg leading-relaxed text-blue-900">
-              Aulas especializadas na seu uso, seja esse para atividades
-              técnicas ou recreativas.
+              Aulas especializadas para o seu uso, seja para atividades técnicas
+              ou recreativas.
             </p>
             <Button url="contact" text="Fale comigo!" />
           </div>
