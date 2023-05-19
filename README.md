@@ -1,6 +1,10 @@
 Esta é uma simples Landing Page feita em NextJS e Typescript, para aulas online de inglês.
 
-O projeto está em desenvolvimento.
+O projeto foi desenvolvido em NextJS, na versão 13, e Typescript.
+
+Veja o site online em <a href="www.fgsidiomas.com">Professora Fernanda Santos</a>.
+
+<img src="https://i.imgur.com/CoEF83S.png" />
 
 As tecnologias implementadas incluem:
 
