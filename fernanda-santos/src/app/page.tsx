@@ -14,7 +14,7 @@ export default function Home() {
       <Hero />
       <CTA />
       <Benefits />
-      {/* <Social /> */}
+      <Social />
       <About />
       <Contact />
     </main>
