@@ -1,30 +1,34 @@
 import Image from "next/image";
 
 interface cardProps {
-  name: string;
-  description: string;
   source: string;
   altText: string;
+  translate: string;
+  rotate: string;
+  peerTranslate?: string;
+  peerRotate?: string;
 }
 
-export function Card({ name, description, source, altText }: cardProps) {
+export function Card({
+  source,
+  altText,
+  translate,
+  rotate,
+  peerTranslate,
+  peerRotate,
+}: cardProps) {
+  //Tenho que passar a string completa do estilo para o Tailwind reconhecer
+  const translateString = `xl:${translate}`;
+  const rotateString = `xl:${rotate}`;
+  const peerRotateString = `xl:peer-hover:${peerRotate}`;
+  const peerTranslateString = `xl:peer-hover:${peerTranslate}`;
   return (
-    <div className={`mb-12 px-2 lg:mb-0`}>
-      <div className="flex px-6">
-        <Image
-          src={source}
-          alt={altText}
-          width={200}
-          height={300}
-          className="width-[1/8] flex-1"
-        />
-        <div className="ml-4 flex flex-1 flex-col justify-center pt-6 text-left">
-          <h5 className="text-xl font-semibold">{name}</h5>
-          <p className="mt-1 text-sm font-semibold text-gray-500">
-            {description}
-          </p>
-        </div>
-      </div>
+    <div
+      className={`xl:delay-250 xl:peer aspect-[5/6] xl:absolute xl:w-full ${translateString} ${rotateString} rounded-lg bg-red-500 opacity-60 hover:opacity-100 xl:transition xl:duration-500 xl:ease-in-out xl:hover:translate-x-0 xl:hover:rotate-0 xl:hover:scale-125 ${
+        peerRotate ? peerRotateString : ""
+      } ${peerTranslate ? peerTranslateString : ""} `}
+    >
+      <Image src={source} alt={altText} fill />
     </div>
   );
 }
