@@ -1,10 +1,9 @@
 "use client";
-import { Card } from "@/components/card";
-import { Carousel } from "react-responsive-carousel";
 import { Open_Sans } from "next/font/google";
-import image from "@/assets/logo.jpg";
+import image from "@/assets/InstagramImage.jpg";
+import image1 from "@/assets/InstagramImage1.jpeg";
+import image2 from "@/assets/InstagramImage2.jpeg";
 
-import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import Image from "next/image";
 
 const open_sans = Open_Sans({
@@ -28,15 +27,15 @@ export function Social() {
             </p>
           </div>
         </div>
-        <div className="relative grid w-2/3 grid-rows-3 justify-center gap-2 p-2 sm:grid-cols-3 sm:grid-rows-1 xl:block xl:min-h-[600px] xl:min-w-[200px] xl:max-w-[400px]">
+        <div className="relative grid w-2/3 grid-rows-3 justify-center gap-2 p-2 sm:grid-cols-3 sm:grid-rows-1 xl:block xl:min-h-[800px] xl:min-w-[200px] xl:max-w-[400px]">
           <div className="delay-250 peer mx-1 aspect-[5/6] min-h-fit -translate-x-16 -rotate-12 transform-none rounded-lg bg-red-500 transition-none transition duration-500 ease-in-out hover:translate-x-0 hover:rotate-0 hover:scale-125 hover:opacity-100 xl:absolute xl:mx-0 xl:w-full xl:transform xl:opacity-60 xl:transition">
             <Image src={image} alt="Placeholder" />
           </div>
           <div className="delay-250 peer mx-1 aspect-[5/6] -translate-y-4 transform-none rounded-lg bg-orange-600 transition duration-500 ease-in-out hover:rotate-0 hover:scale-125 hover:opacity-100 peer-hover:translate-x-80 peer-hover:rotate-45 xl:absolute xl:mx-0 xl:w-full xl:transform xl:opacity-60">
-            <Image src={image} alt="Placeholder" />
+            <Image src={image1} alt="Placeholder" />
           </div>
           <div className="delay-250 peer mx-1 aspect-[5/6] translate-x-16 rotate-12 transform-none rounded-lg bg-blue-500 transition duration-500 ease-in-out hover:translate-x-16 hover:rotate-0 hover:scale-125 hover:opacity-100 peer-hover:translate-x-80 peer-hover:rotate-45 xl:absolute xl:mx-0 xl:w-full xl:transform xl:opacity-60">
-            <Image src={image} alt="Placeholder" />
+            <Image src={image2} alt="Placeholder" />
           </div>
         </div>
       </div>
