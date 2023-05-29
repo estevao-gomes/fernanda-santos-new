@@ -4,8 +4,6 @@ import "@fortawesome/fontawesome-svg-core/styles.css";
 
 import { PT_Sans } from "next/font/google";
 
-import "react-responsive-carousel/lib/styles/carousel.min.css";
-
 config.autoAddCss = false;
 
 const pt_sans = PT_Sans({
