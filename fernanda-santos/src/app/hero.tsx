@@ -43,7 +43,7 @@ export function Hero() {
         </div>
       </div>
       <div className="relative flex h-full justify-center lg:col-span-1 lg:auto-cols-min lg:items-center lg:justify-end">
-        <div className="relative mt-16 aspect-video h-1/4 md:mt-32 lg:mt-0 lg:h-1/2 lg:translate-x-28">
+        <div className="relative mt-16 aspect-[3/2] h-1/4 md:mt-32 lg:mt-0 lg:h-1/2 lg:translate-x-8">
           <div className="absolute h-full w-full translate-x-4 translate-y-4 bg-blue-900 lg:-z-10 lg:translate-x-8 lg:translate-y-8"></div>
           <div className="absolute h-full w-full -translate-x-4 -translate-y-4 bg-brightred-500 lg:-z-10 lg:-translate-x-8 lg:-translate-y-8"></div>
           <Image priority fill src={HeroImage} alt="Imagem de um prédio com a bandeira da Inglaterra projetada." />

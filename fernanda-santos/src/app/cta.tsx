@@ -86,16 +86,16 @@ export function CTA() {
 
         <div className="mt-32 flex flex-wrap items-center">
           <div className="mr-auto ml-auto mb-12 w-full px-4 md:mb-0 md:w-5/12">
-            <h3
+            <h1
               className={`${open_sans.className} mb-2 text-5xl font-bold leading-normal text-blue-900 md:text-6xl`}
             >
               Inglês para você{" "}
               <TextTransition springConfig={presets.wobbly}>
-                <h1 className="bg-gradient-to-tr from-brightred-500 to-blue-900 bg-clip-text text-transparent">
+                <span className="bg-gradient-to-tr from-brightred-500 to-blue-900 bg-clip-text text-transparent">
                   {transitionTexts[index % transitionTexts.length]}
-                </h1>
+                </span>
               </TextTransition>
-            </h3>
+            </h1>
             <p className="mt-4 mb-4 text-lg leading-relaxed text-blue-900">
               Aqui o aprendizado é moldado a sua necessidade. Aprenda com foco
               no que você precisa, e não de maneira genérica.
@@ -133,9 +133,9 @@ export function CTA() {
                     className="fill-current text-blue-900"
                   ></polygon>
                 </svg>
-                <h3 className="text-xl font-bold text-white">
+                <h2 className="text-xl font-bold text-white">
                   Aulas didáticas e dinâmicas.
-                </h3>
+                </h2>
                 <p className="text-md mt-2 font-light text-white">
                   Aprenda da maneira mais rápida e de forma eficiente. Tudo
                   adaptado para a melhor experiência.
