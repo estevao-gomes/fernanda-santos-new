@@ -1,4 +1,4 @@
-import { Open_Sans, PT_Sans, PT_Sans_Narrow } from "next/font/google";
+import { Open_Sans, PT_Sans_Narrow } from "next/font/google";
 import Image from "next/image";
 
 import HeroImage from "@/assets/Hero.jpg";

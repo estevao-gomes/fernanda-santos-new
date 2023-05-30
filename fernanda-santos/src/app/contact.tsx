@@ -31,14 +31,12 @@ export function Contact() {
           event.currentTarget,
           process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY
         );
-        console.log(dataResult);
       } catch (error: any) {
         Swal.fire({
           title: "Erro no envio da mensagem",
           icon: "error",
           text: "Por favor, tente novamente mais tarde.",
         });
-        console.log(error.text);
       }
 
       setFormData({ name: "", email: "", text: "" });
@@ -50,8 +48,6 @@ export function Contact() {
       });
       return;
     }
-
-    console.log(formData);
     return;
   }
 
