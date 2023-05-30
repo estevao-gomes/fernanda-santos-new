@@ -3,6 +3,7 @@ import { Open_Sans } from "next/font/google";
 const open_sans = Open_Sans({
   weight: "800",
   subsets: ["latin"],
+  display: "swap"
 });
 
 export function About() {
@@ -36,7 +37,7 @@ export function About() {
             >
               Quem sou eu?
             </h2>
-            <p className="mt-4 mb-4 text-lg leading-relaxed text-gray-400">
+            <p className="mt-4 mb-4 text-lg leading-relaxed text-gray-200">
               Professora de inglês a mais de 15 anos, já pude ajudar centenas de
               alunos a alcançar seus objetivos e melhorar seu inglês. Venha ser
               mais um deles,{" "}

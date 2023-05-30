@@ -9,7 +9,8 @@ config.autoAddCss = false;
 const pt_sans = PT_Sans({
   weight: ["400", "700"],
   subsets: ["latin"],
-  display: "auto",
+  display: "swap",
+  
 });
 
 export const metadata = {

@@ -67,7 +67,7 @@ export function Contact() {
           <div className="w-full px-4 lg:w-6/12">
             <div className="relative mb-6 flex w-full min-w-0 flex-col break-words rounded-lg bg-gray-300 shadow-lg">
               <div className="flex-auto p-5 lg:p-10">
-                <h4 className="text-2xl font-semibold">Quer saber mais?</h4>
+                <h2 className="text-2xl font-semibold">Quer saber mais?</h2>
                 <p className="mt-1 mb-4 leading-relaxed text-gray-600">
                   Envie sua mensagem, e entrarei em contato, ou me procure em
                   minhas redes sociais nos botões abaixo.
@@ -145,17 +145,13 @@ export function Contact() {
               </div>
             </div>
             <div className="mx-auto mt-6 flex justify-center">
-              {/* <button
-                className="mr-1 mb-1 h-8 w-8 rounded-full bg-blue-400 text-white outline-none focus:outline-none"
-                type="button"
-              >
-                <FontAwesomeIcon icon={faTwitter} />
-              </button> */}
               <a
                 href="https://www.facebook.com/profinglesfernanda"
                 target="_blank"
+                aria-label="visite minha página no facebook"
               >
                 <button
+                  aria-label="botão para levar à página do facebook"
                   className="mr-1 mb-1 h-8 w-8 rounded-full bg-blue-600 text-white outline-none focus:outline-none"
                   type="button"
                 >
@@ -165,8 +161,10 @@ export function Contact() {
               <a
                 target="_blank"
                 href="https://www.instagram.com/profinglesfernanda/"
+                aria-label="Visite minha página no instagram"
               >
                 <button
+                  aria-label="botão para levar à página do instagra,"
                   className="mr-1 mb-1 h-8 w-8 rounded-full bg-pink-500 text-white outline-none focus:outline-none"
                   type="button"
                 >

@@ -13,6 +13,7 @@ import benefitsImage from "@/assets/benefits.jpg";
 const open_sans = Open_Sans({
   weight: "800",
   subsets: ["latin"],
+  display: "swap"
 });
 
 export function Benefits() {
@@ -43,7 +44,7 @@ export function Benefits() {
           <div className="ml-auto mr-auto mb-4 w-full px-4 md:mb-0 md:w-4/12">
             <Image
               src={benefitsImage}
-              alt="Placeholder Image"
+              alt="Imagem de uma moeda, representando preço baixo"
               width={400}
               height={200}
               className="rounded-lg"

@@ -19,6 +19,7 @@ import ctaImage from "@/assets/cta.avif";
 const open_sans = Open_Sans({
   subsets: ["latin"],
   weight: "800",
+  display: "swap"
 });
 
 const transitionTexts = ["VIVER", "VIAJAR", "CANTAR", "TRABALHAR"];
@@ -41,9 +42,9 @@ export function CTA() {
                 <div className="mb-5 inline-flex h-12 w-12 items-center justify-center rounded-full bg-blue-900 p-3 text-center text-white shadow-lg">
                   <FontAwesomeIcon icon={faAward} />
                 </div>
-                <h6 className="text-xl font-semibold">
-                  Certificação Internacional
-                </h6>
+                <h3 className="text-xl font-semibold">
+                  Experiência comprovada
+                </h3>
                 <p className="mt-2 mb-4 text-gray-600">
                   Mais de 15 anos de experiência em ensinar a lingua inglesa,
                   sendo mais de 8 com aulas online.
@@ -58,7 +59,7 @@ export function CTA() {
                 <div className="mb-5 inline-flex h-12 w-12 items-center justify-center rounded-full bg-blue-900 p-3 text-center text-white shadow-lg">
                   <FontAwesomeIcon icon={faRetweet} />
                 </div>
-                <h6 className="text-xl font-semibold">Conteúdo atualizado</h6>
+                <h3 className="text-xl font-semibold">Conteúdo atualizado</h3>
                 <p className="mt-2 mb-4 text-gray-600">
                   Aprenda sempre com os conteúdos mais atuais e com o uso das
                   técnicas que mais se adequem a sua maneira de aprender.
@@ -73,7 +74,7 @@ export function CTA() {
                 <div className="mb-5 inline-flex h-12 w-12 items-center justify-center rounded-full bg-blue-900 p-3 text-center text-white shadow-lg">
                   <FontAwesomeIcon icon={faFingerprint} />
                 </div>
-                <h6 className="text-xl font-semibold">Feito para você</h6>
+                <h3 className="text-xl font-semibold">Feito para você</h3>
                 <p className="mt-2 mb-4 text-gray-600">
                   Material e aulas montadas de acordo com a sua necessidade,
                   para você aprender o inglês que você precisa.
@@ -110,7 +111,7 @@ export function CTA() {
             <div className="relative mb-6 flex w-full min-w-0 flex-col break-words rounded-lg bg-blue-900 shadow-lg">
               <Image
                 src={ctaImage}
-                alt="placeholder image"
+                alt="Imagem de uma pessoa realizando atividades online"
                 width={800}
                 height={600}
                 className="rounded-t-lg"
@@ -132,9 +133,9 @@ export function CTA() {
                     className="fill-current text-blue-900"
                   ></polygon>
                 </svg>
-                <h4 className="text-xl font-bold text-white">
+                <h3 className="text-xl font-bold text-white">
                   Aulas didáticas e dinâmicas.
-                </h4>
+                </h3>
                 <p className="text-md mt-2 font-light text-white">
                   Aprenda da maneira mais rápida e de forma eficiente. Tudo
                   adaptado para a melhor experiência.
