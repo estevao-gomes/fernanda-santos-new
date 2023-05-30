@@ -12,7 +12,6 @@ As tecnologias implementadas incluem:
 <li>NextJS</li>
 <li>Typescript</li>
 <li>TailwindCSS</li>
-<li>react-responsive-carousel</li>
 <li>react-text-transition</li>
 <li>sweetalert</li>
 <li>EmailJS</li>
