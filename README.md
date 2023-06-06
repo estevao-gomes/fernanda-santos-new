@@ -1,4 +1,4 @@
-Esta é uma simples Landing Page feita em NextJS e Typescript, para aulas online de inglês.
+Esta é uma Landing Page feita em NextJS e Typescript, para aulas online de inglês.
 
 O projeto foi desenvolvido em NextJS, na versão 13, e Typescript.
 
